@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+int add(int a,int b)
+{
+	int sum = a+b;
+	return(sum);
+}
+int subtract(int a,int b)
+{
+	int diff = a-b;
+	return(diff);
+}
+int multiply(int a,int b)
+{
+	int product = a*b;
+	return(product);
+}
+float divide(float a,float b)
+{
+	float ans = a/b;
+	return(ans);
+}
+int main()
+{
+   int x,y;
+   char value ;
+   cout<<"Welcome to TALKING CALCULATOR \nCurrently I can only add,subtract,multiply and divide\nYou will be prompted to enter the values\n";
+   cout<<"Enter the 1st Value"<<endl;
+   cin>>x;
+   cout<<"Enter the 2nd Value"<<endl;
+   cin>>y;
+   cout<<"The values entered are "<<x<<" & "<<y;
+   cout<<"\nNow , we will proceed on to select the operation\nYou will be prompted to select the operation\nPress 'a' for addition\nPress 'b' for subtraction\nPress 'c' for multiplication\nPress 'd' for division\n ";
+   cin>>value;
+   cout<<"You pressed "<<value<<endl;
+   switch(value)
+   { 
+     case 'a':
+         cout<<"The sum is "<<add(x,y);
+         break;
+     case 'b':
+     	 cout<<"The difference is "<<subtract(x,y);
+         break;
+     case 'c':
+     	 cout<<"The product is "<<multiply(x,y);
+         break;
+     case 'd':
+     	 cout<<"The answer is "<<divide(x,y);
+     	 break ;
+     default:
+      cout<<"Case not identified";
+   }
+}
